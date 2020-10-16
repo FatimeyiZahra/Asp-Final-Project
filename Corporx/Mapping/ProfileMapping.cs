@@ -32,8 +32,8 @@ namespace Corporx.Mapping
 
             CreateMap<Client, ClientResource>();
 
-            CreateMap<Data.Entities.Corporx, CorporxResource>();
-                //.ForMember(l=>l.Logo, opt=>opt.MapFrom(src=>src.Logo.Select(p=>BaseUrl+ p.))
+            CreateMap<Data.Entities.Corporx, CorporxResource>()
+                .ForMember(l => l.Logo, opt => opt.MapFrom(src => BaseUrl + src.Logo));
 
         }
 
